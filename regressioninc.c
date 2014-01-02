@@ -46,23 +46,6 @@ int main (int argc, const char * argv[]) {
 	char file[200];
 	char depv[10];
 	char ESC=27;
-	printf("%c[2J", ESC);
-	printf("*********************************\n");
-	printf("%c[1m", ESC);
-	printf("     REGRESSION DOER 1.0\n");
-	printf("    By Nik Goyert-Stephens\n");
-	printf("%c[0m", ESC);
-	printf("****************************\n");
-	printf("In order for OLS regression \n");
-	printf("to work, file must be in txt \n");
-	printf("format, and must be located\n");
-	printf("within the current directory\n");
-	printf("unless specified by YOU the\n");
-	printf("intrepid user. Also put .txt\n");
-	printf("in the filename otherwise I\n");
-	printf("don't even know what will\n");
-	printf("happen.\n");
-	printf("****************************\n");
 	fputs("Input filename of regressional interest: ", stdout);
 	fflush(stdout);
 	fgets(file, sizeof file, stdin);
@@ -71,7 +54,7 @@ int main (int argc, const char * argv[]) {
 	fq = fp;
 	fr = fp;
 	if (fp == NULL){
-		perror("Z.I.A.N.bot says ERROR");
+		perror("ERROR: File not found");
 		return EXIT_FAILURE;
 	}
 	printf("OK;\n");
